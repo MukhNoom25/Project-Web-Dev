@@ -1,0 +1,6 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.9",
+        "bacon/bacon-qr-code": "^2.0"
+    }
+}

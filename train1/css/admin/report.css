@@ -1,0 +1,342 @@
+/* =============================================================================
+   REPORT PAGE SPECIFIC STYLES - Added to existing admin.css
+   ============================================================================= */
+
+/* Apply mechanics-style content area to report page */
+body:has(.services-request-table) .content,
+.report-content .content {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-height: auto;
+}
+
+/* Report page content header */
+body:has(.services-request-table) .content-header,
+.report-content .content-header {
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(102, 126, 234, 0.1);
+}
+
+body:has(.services-request-table) .content-title,
+.report-content .content-title {
+    color: #2c3e50;
+    text-shadow: none;
+}
+
+body:has(.services-request-table) .content-title::after,
+.report-content .content-title::after {
+    width: 50px;
+    bottom: -10px;
+}
+
+/* Date Filter Row Styling */
+.date-filter-row {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: rgba(102, 126, 234, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.date-filter-row form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.date-filter-row label {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.date-filter-row input[type="date"] {
+    padding: 10px 15px;
+    border: 2px solid rgba(102, 126, 234, 0.2);
+    border-radius: 10px;
+    background: white;
+    color: #2c3e50;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    outline: none;
+    min-width: 150px;
+}
+
+.date-filter-row input[type="date"]:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.date-filter-row button {
+    background: linear-gradient(135deg, #667eea 0%, #3498db 100%);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.date-filter-row button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.date-filter-row button[type="button"] {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    box-shadow: 0 3px 10px rgba(67, 233, 123, 0.3);
+}
+
+.date-filter-row button[type="button"]:hover {
+    box-shadow: 0 5px 15px rgba(67, 233, 123, 0.4);
+}
+
+/* Service Request Table Container */
+.services-request-table-container {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    margin-top: 20px;
+}
+
+/* Service Request Table */
+.services-request-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.services-request-table thead {
+    background: linear-gradient(135deg, #667eea 0%, #3498db 100%);
+    color: white;
+}
+
+.services-request-table thead th {
+    padding: 18px 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.services-request-table thead th:last-child {
+    border-right: none;
+}
+
+.services-request-table tbody tr {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.services-request-table tbody tr:hover {
+    background: rgba(102, 126, 234, 0.05);
+    transform: scale(1.01);
+}
+
+.services-request-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.services-request-table tbody td {
+    padding: 15px;
+    vertical-align: middle;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* Status Button Styling for Report */
+.services-request-table .status-btn {
+    padding: 6px 16px;
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 80px;
+}
+
+.services-request-table .status-btn.complete {
+    background: linear-gradient(135deg, #00c851 0%, #007e33 100%);
+    color: white;
+    box-shadow: 0 3px 10px rgba(0, 200, 81, 0.3);
+}
+
+.services-request-table .status-btn.pending {
+    background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+    color: white;
+    box-shadow: 0 3px 10px rgba(255, 68, 68, 0.3);
+}
+
+.services-request-table .status-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* No Records Message */
+.services-request-table-container p {
+    text-align: center;
+    color: #ff4444;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 40px 20px;
+    background: rgba(255, 68, 68, 0.05);
+    border-radius: 10px;
+    margin: 20px;
+    border: 1px solid rgba(255, 68, 68, 0.1);
+}
+
+/* =============================================================================
+   RESPONSIVE DESIGN FOR REPORT PAGE
+   ============================================================================= */
+
+@media (max-width: 1200px) {
+    .services-request-table {
+        font-size: 13px;
+    }
+    
+    .services-request-table thead th,
+    .services-request-table tbody td {
+        padding: 12px 10px;
+    }
+    
+    .date-filter-row form {
+        gap: 10px;
+    }
+    
+    .date-filter-row input[type="date"] {
+        min-width: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Report page mobile */
+    body:has(.services-request-table) .content,
+    .report-content .content {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    .date-filter-row {
+        padding: 15px;
+    }
+    
+    .date-filter-row form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    .date-filter-row input[type="date"] {
+        min-width: 100%;
+    }
+    
+    .date-filter-row button {
+        width: 100%;
+        padding: 12px;
+    }
+    
+    .services-request-table-container {
+        overflow-x: auto;
+    }
+    
+    .services-request-table {
+        min-width: 1000px;
+    }
+    
+    .services-request-table thead th,
+    .services-request-table tbody td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+    
+    .services-request-table .status-btn {
+        min-width: 70px;
+        font-size: 10px;
+        padding: 5px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    body:has(.services-request-table) .content-title,
+    .report-content .content-title {
+        font-size: 20px;
+    }
+    
+    .services-request-table {
+        font-size: 11px;
+        min-width: 900px;
+    }
+    
+    .services-request-table thead th,
+    .services-request-table tbody td {
+        padding: 8px 6px;
+    }
+    
+    .date-filter-row {
+        padding: 10px;
+    }
+    
+    .date-filter-row button {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+/* =============================================================================
+   PRINT STYLES FOR REPORT
+   ============================================================================= */
+
+@media print {
+    .date-filter-row,
+    .sidebar,
+    .home-content {
+        display: none !important;
+    }
+    
+    .home-section {
+        left: 0 !important;
+        width: 100% !important;
+    }
+    
+    .content {
+        margin: 0 !important;
+        padding: 20px !important;
+        background: white !important;
+        box-shadow: none !important;
+    }
+    
+    .services-request-table {
+        font-size: 12px;
+    }
+    
+    .services-request-table thead th,
+    .services-request-table tbody td {
+        padding: 8px;
+        border: 1px solid #000;
+    }
+    
+    .content-title {
+        color: #000 !important;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
